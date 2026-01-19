@@ -30,6 +30,12 @@
 		"ghcr.io/devcontainers-extra/features/pre-commit:2": {
 			"version": "latest"
 		},
+		"ghcr.io/devcontainers/features/terraform:1": {
+			"installTerraformDocs": true,
+			"version": "latest",
+			"tflint": "latest",
+			"terragrunt": "latest"
+		},
 	},
 
 	"remoteEnv": {
@@ -59,7 +65,16 @@
 	"postCreateCommand": {
     	"conventional-pre-commit": "pip install conventional-pre-commit",
     	"git": "git config gpg.format ssh && git config gpg.ssh.defaultKeyCommand 'ssh-add -L | head -1'"
-  	},
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"alefragnani.Bookmarks",
+				"fabiospampinato.vscode-todo-plus",
+				"ms-azuretools.vscode-azureterraform"
+			]
+		}
+	},
 
 	// Configure tool-specific properties.
 	// "customizations": {},
