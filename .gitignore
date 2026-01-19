@@ -1,0 +1,6 @@
+.env
+
+*.tfstate
+*.tfstate.*
+
+crash.log
