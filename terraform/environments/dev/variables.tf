@@ -1,5 +1,5 @@
 variable "environment" {
-  description = "The environment for the AKS deployment (e.g., dev, prod)"
+  description = "The environment for this deployment (e.g., dev, prod)"
   type        = string
   default     = "dev"
 
@@ -10,10 +10,7 @@ variable "environment" {
 }
 
 variable "location" {
-  type = object({
-    id            = string,
-    region_type   = string,
-    display_name  = string,
-    zone_mappings = map(list(string))
-  })
+  description = "The location to deploy resources"
+  type        = string
+  default     = "West US 3"
 }
